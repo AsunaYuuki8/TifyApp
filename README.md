@@ -1,31 +1,72 @@
 ![Tify](https://cdn-icons-png.flaticon.com/64/9973/9973495.png)
-# TifyApp 
-An Android Music player created using Media3 Exoplayer.  
+## App Name: TifyApp
+
+Short Description:
+An Android music player built on Media3 ExoPlayer, using a modern MVVM architecture, Firebase Firestore for data management, and a dynamic user interface.
+
+Main Idea:
+To deliver a fast, smooth, and aesthetically pleasing music experience through gesture-based controls, a BottomSheet player, dynamic colors, and efficient image loading.
 
 ## Features
-- Aesthetic, smooth and creative UI
-- Developed strictly on **MVVM architecture**
-- Implemented gesture features: **swipe left and right** on the bottom card player to navigate through playlist
-- Implemented Bottomsheet to pull up the player. You can either click or **swipe up** to open the player.
-- Utilised gradient Android library to decorate the entire app elements such as **dynamic background** which changes with changing songs. For Android 12+ devices, player's background is blurred artwork of song and merges with the bottom gradient. 
-- Utilised beautiful gifs to indicate loading and playing status. 
-- Notification controls are linked with the player so any other devices connected with your phone (bluetooth headsets, TV, tablet etc.,) can control the media.
-- Utilised Firestore for fetching song data
 
+UI:
+Smooth and aesthetic interface with dynamic colors.
+
+Gestures:
+Swipe left/right — playlist navigation; swipe up — open the player.
+
+BottomSheet Player:
+Expandable and collapsible bottom music player.
+
+Notification Controls:
+Media playback control from system notifications and connected devices.
+
+Realtime Data:
+Songs are fetched in real time from Firebase Firestore.
+
+Images:
+Glide/Coil for cover art, GIFs, and blurred artwork (Android 12+).
 ## Screenshots
 ![screen1](screenshots/screen1.png) ![screen2](screenshots/screen2.png)
+![screen3](screenshots/screen3.png)
+## Architecture & Requirement Compliance
 
-## Frameworks and libraries used
+Single Activity + Multiple Fragments:
+A main Activity manages multiple Fragments, enabling a modular UI and simplified navigation.
+
+ViewBinding:
+Safe and efficient view access within Activities and Fragments.
+
+Data Management:
+Firestore is used to fetch and update song data.
+
+Lists & Views:
+RecyclerView (or Compose LazyColumn) for structured and efficient data display.
+Image Loading:
+Glide/Coil for fast and memory-efficient image loading.
+
+## გამოყენებული Framework-ები და ბიბლიოთეკები
 - [Media3 Exoplayer](https://developer.android.com/guide/topics/media/exoplayer)
 - [Jetpack Compose (Material 3)](https://developer.android.com/jetpack/compose/designsystems/material3)
 - [Dagger Hilt Dependency Injection](https://developer.android.com/training/dependency-injection/hilt-android)
-- [Coroutines](https://developer.android.com/kotlin/coroutines) and [Flow](https://developer.android.com/kotlin/flow) 
-- [Glide](https://github.com/bumptech/glide) and [Coil](https://github.com/coil-kt/coil)
+- [Coroutines](https://developer.android.com/kotlin/coroutines) და [Flow](https://developer.android.com/kotlin/flow)
+- [Glide](https://github.com/bumptech/glide) და [Coil](https://github.com/coil-kt/coil)
 - [Firestore](https://firebase.google.com/docs/firestore)
-- [Palette](https://developer.android.com/develop/ui/views/graphics/palette-colors) library for getting color gradients from cover artwork
+- [Palette](https://developer.android.com/develop/ui/views/graphics/palette-colors) — ფერების გენერაცია cover art-იდან
 
-## CI/CD
-I have also connected this repository with [Bitrise](https://bitrise.io) for continuous integration. 
 
-## [APK File](https://drive.google.com/file/d/1aYirpQ1YbawWMmpi8VaphWfoE8WHlYIU/view?usp=share_link)
-Note: Android device will warn you regarding "no information on developer" while installing the app, scroll down and select "install anyway". There are no elements in the app that can harm your android device.
+## Task Requirements
+- ✅ **Single Activity + Multiple Fragments** — აპლიკაცია იყენებს ერთ Activity-ს და რამდენიმე Fragment-ს
+- ✅ **ViewBinding** — გამოყენებულია ViewBinding უსაფრთხო და ეფექტური View-ების წვდომისთვის
+- ✅ **Data Management** — Firestore ინტეგრაცია მონაცემების წამოსაღებად
+- ✅ **Lists & Views** — RecyclerView/Compose LazyColumn მონაცემების ჩვენებისთვის
+- ✅ **Image Loading** — Glide და Coil ბიბლიოთეკები სურათების ჩასატვირთად
+
+## დამატებითი შესაძლებლობები
+- MVVM არქიტექტურა
+- Dagger Hilt Dependency Injection
+- Kotlin Coroutines & Flow
+- Palette library — დინამიური ფერები
+- CI/CD — ინტეგრაცია [Bitrise](https://bitrise.io)-თან
+
+## Group project
